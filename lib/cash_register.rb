@@ -15,7 +15,7 @@ class CashRegister
   
   def apply_discount
     if (discount == 0)
-      puts "There is no discount to apply."
+      "There is no discount to apply."
     else
       hundred_float = 100.0
       pay_percent = (hundred_float - discount.to_f)/hundred_float
