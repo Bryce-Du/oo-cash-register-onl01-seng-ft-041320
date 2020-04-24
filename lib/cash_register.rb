@@ -14,5 +14,6 @@ class CashRegister
   end
   
   def apply_discount
+    pay_percent = (100.0-discount)
   end
 end
