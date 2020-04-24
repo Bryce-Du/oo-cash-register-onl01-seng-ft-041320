@@ -20,7 +20,7 @@ class CashRegister
       hundred_float = 100.0
       pay_percent = (hundred_float - discount.to_f)/hundred_float
       @total *= pay_percent
-      "After the discount, the total comes to $#{@total}."
+      "After the discount, the total comes to $#{@total.to_i}."
     end
   end
 end
