@@ -14,6 +14,7 @@ class CashRegister
   end
   
   def apply_discount
-    pay_percent = (discount.to_f)/100.0
+    hundred_float = 100.0
+    pay_percent = hundred_float - discount.to_f/hundred_float
   end
 end
