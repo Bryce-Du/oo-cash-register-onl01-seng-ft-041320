@@ -29,7 +29,7 @@ class CashRegister
   
   def void_last_transaction
     @items.pop(@last_qt)
-    if @items.length = 0
+    if @items.length == 0
       @total = 0.0
     else
       @total -= @recent_item_cost
