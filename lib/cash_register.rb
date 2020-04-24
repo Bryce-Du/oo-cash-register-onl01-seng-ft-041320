@@ -1,5 +1,5 @@
 class CashRegister
-  attr_accessor :total, :discount, :items, :oldtotal
+  attr_accessor :total, :discount, :items, :recent_item_cost
   
   def initialize (discount = 0)
     @total = 0
@@ -9,7 +9,7 @@ class CashRegister
   
   def add_item (title, price, quantity = 1)
     @items << title
-    @oldtotal = @total
+    @recent_item_cost = price
     @total += price*quantity
   end
   
@@ -21,5 +21,6 @@ class CashRegister
       pay_percent = (hundred_float - discount.to_f)/hundred_float
       @total *= pay_percent
       puts "After the discount, the total comes to $#{@total}."
+    end
   end
 end
